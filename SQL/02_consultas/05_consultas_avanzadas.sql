@@ -236,13 +236,13 @@ SELECT
     COUNT(reserva.id_reserva) AS total_reservas_solicitadas, 
     SUM(
         CASE 
-            WHEN reserva.estado_reserva IN ('cancelada', 'completada') THEN 1 
+            WHEN reserva.estado_reserva IN ('confirmada', 'completada') THEN 1 
             ELSE 0 
         END
     ) AS reservas_efectivas, 
     SUM(
         CASE 
-            WHEN reserva.estado_reserva IN ('cancelada', 'completada') THEN TIMESTAMPDIFF(HOUR, reserva.hora_inicio, reserva.hora_fin) 
+            WHEN reserva.estado_reserva IN ('confirmada', 'completada') THEN TIMESTAMPDIFF(HOUR, reserva.hora_inicio, reserva.hora_fin) 
             ELSE 0 
         END
     ) AS total_horas_ocupadas, 
