@@ -100,19 +100,10 @@ WHERE User IN (
 ORDER BY User, Host;
 
 -- Verificación de asignación de roles
-SELECT 
-    FROM_USER AS 'Usuario',
-    TO_USER   AS 'Rol asignado',
-    TO_HOST   AS 'Host del rol'
+SELECT TO_USER AS 'Usuario', FROM_USER AS 'Rol asignado', FROM_HOST AS 'Host del rol'
 FROM mysql.role_edges
-WHERE FROM_USER IN (
-    'admin_coworking',
-    'recepcionista',
-    'usuario_app',
-    'gerente_corporativo',
-    'contador'
-)
-ORDER BY FROM_USER;
+WHERE TO_USER IN ('admin_coworking','recepcionista','usuario_app','gerente_corporativo','contador')
+ORDER BY TO_USER;
 
 -- Muestra de grants de ejemplo
 SHOW GRANTS FOR 'recepcionista'@'localhost';

@@ -11,8 +11,7 @@ DESCRIPCIÓN: Creación de los 5 roles de base de datos exigidos en la sección 
              4. Gerente Corporativo         
              5. Contador                    
 REQUISITOS PREVIOS:
-  - Ejecutar como usuario con privilegios de CREATE ROLE / GRANT
-    (recomendado: root o el usuario Yeimer con privilegios globales).
+  - Ejecutar como usuario con privilegios de CREATE ROLE / GRANT.
   - MySQL 8.0+ (soporta roles nativos).
   - Base de datos coworking_db ya creada.
 */
