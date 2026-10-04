@@ -43,7 +43,7 @@ coworking-mysql2-grupo03/
 ├── README.md
 ├── docs/
 │   ├── modelo_logico.png
-│   └── roles_permisos.md
+│   └── modelo_ER.md
 └── sql/
     ├── 00_ddl/
     │   └── 01_estructura.sql
